@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nginx-proxy:
-    image: jwilder/nginx-proxy
+    image: jwilder/nginx-proxy #braingamer/nginx-proxy-arm
     restart: always
     ports:
       - "80:80"
@@ -16,7 +16,7 @@ services:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
 
   letsencrypt:
-    image: jrcs/letsencrypt-nginx-proxy-companion
+    image: jrcs/letsencrypt-nginx-proxy-companion #keksnase/letsencrypt-nginx-proxy-companion-armhf
     restart: always
     environment:
       - NGINX_PROXY_CONTAINER=nginx-proxy
